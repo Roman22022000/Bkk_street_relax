@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Релакс Бангкок</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#0d0d0d;
+    color:white;
+    overflow-x:hidden;
+}
+
+.app{
+    width:100%;
+    max-width:430px;
+    margin:0 auto;
+    padding:26px 16px 40px;
+}
+
+/* TITLE */
+
+.title{
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    font-size:42px;
+    font-weight:700;
+    line-height:1;
+
+    margin-bottom:28px;
+
+    letter-spacing:-1px;
+}
+
+/* CARDS */
+
+.cards{
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+}
+
+.card{
+    position:relative;
+    width:100%;
+    height:320px;
+    border-radius:34px;
+    overflow:hidden;
+    background:#1a1a1a;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.55);
+}
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transform:scale(1.02);
+}
+
+/* GRADIENT */
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+    linear-gradient(
+        to top,
+        rgba(0,0,0,0.82) 0%,
+        rgba(0,0,0,0.18) 45%,
+        rgba(0,0,0,0.05) 100%
+    );
+}
+
+/* BOOKMARK */
+
+.bookmark{
+    position:absolute;
+    top:18px;
+    right:18px;
+
+    width:52px;
+    height:52px;
+
+    border:none;
+    border-radius:18px;
+
+    background:rgba(15,15,15,0.72);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    cursor:pointer;
+    transition:0.25s;
+
+    z-index:5;
+}
+
+.bookmark svg{
+    width:24px;
+    height:24px;
+
+    stroke:white;
+    fill:none;
+
+    stroke-width:2.2;
+
+    transition:0.25s;
+}
+
+/* ACTIVE */
+
+.bookmark.active{
+    background:rgba(22,45,22,0.92);
+}
+
+.bookmark.active svg{
+    stroke:#38ff72;
+    fill:none;
+}
+
+/* TEXT */
+
+.content{
+    position:absolute;
+    left:22px;
+    right:22px;
+    bottom:24px;
+    z-index:2;
+}
+
+.card-title{
+    font-size:32px;
+    font-weight:700;
+    line-height:1.05;
+    margin-bottom:8px;
+}
+
+.card-desc{
+    font-size:17px;
+    line-height:1.35;
+    color:rgba(255,255,255,0.88);
+}
+
+/* MOBILE */
+
+@media(max-width:390px){
+
+    .card{
+        height:285px;
+    }
+
+    .card-title{
+        font-size:26px;
+    }
+
+    .title{
+        font-size:34px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- TITLE -->
+
+    <div class="title">
+        Релакс Бангкок
+    </div>
+
+    <!-- CARDS -->
+
+    <div class="cards">
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <img src="./relax/frukt.png" alt="">
+
+            <div class="overlay"></div>
+
+            <button class="bookmark">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L14.9 8.6L21 9.5L16.5 13.8L17.6 20L12 17L6.4 20L7.5 13.8L3 9.5L9.1 8.6L12 3Z"/>
+                </svg>
+
+            </button>
+
+            <div class="content">
+
+                <div class="card-title">
+                    Тропические фрукты
+                </div>
+
+                <div class="card-desc">
+                    Экзотические вкусы Бангкока, свежая подача и атмосфера отдыха.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <img src="./relax/maneken.png" alt="">
+
+            <div class="overlay"></div>
+
+            <button class="bookmark">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L14.9 8.6L21 9.5L16.5 13.8L17.6 20L12 17L6.4 20L7.5 13.8L3 9.5L9.1 8.6L12 3Z"/>
+                </svg>
+
+            </button>
+
+            <div class="content">
+
+                <div class="card-title">
+                    Манекен Relax
+                </div>
+
+                <div class="card-desc">
+                    Арт-пространство с футуристичным интерьером и мягким светом.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <img src="./relax/podnos.png" alt="">
+
+            <div class="overlay"></div>
+
+            <button class="bookmark">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L14.9 8.6L21 9.5L16.5 13.8L17.6 20L12 17L6.4 20L7.5 13.8L3 9.5L9.1 8.6L12 3Z"/>
+                </svg>
+
+            </button>
+
+            <div class="content">
+
+                <div class="card-title">
+                    Relax Lounge
+                </div>
+
+                <div class="card-desc">
+                    Атмосфера спокойствия, напитки и комфортное пространство.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 4 -->
+
+        <div class="card">
+
+            <img src="./relax/ptica.png" alt="">
+
+            <div class="overlay"></div>
+
+            <button class="bookmark">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L14.9 8.6L21 9.5L16.5 13.8L17.6 20L12 17L6.4 20L7.5 13.8L3 9.5L9.1 8.6L12 3Z"/>
+                </svg>
+
+            </button>
+
+            <div class="content">
+
+                <div class="card-title">
+                    Tropical Birds
+                </div>
+
+                <div class="card-desc">
+                    Тропические мотивы и визуальный релакс в современном стиле.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 5 -->
+
+        <div class="card">
+
+            <img src="./relax/rastenie.png" alt="">
+
+            <div class="overlay"></div>
+
+            <button class="bookmark">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L14.9 8.6L21 9.5L16.5 13.8L17.6 20L12 17L6.4 20L7.5 13.8L3 9.5L9.1 8.6L12 3Z"/>
+                </svg>
+
+            </button>
+
+            <div class="content">
+
+                <div class="card-title">
+                    Green Relax
+                </div>
+
+                <div class="card-desc">
+                    Живые растения, минимализм и спокойная атмосфера отдыха.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- CARD 6 -->
+
+        <div class="card">
+
+            <img src="./relax/smuzi.png" alt="">
+
+            <div class="overlay"></div>
+
+            <button class="bookmark">
+
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 3L14.9 8.6L21 9.5L16.5 13.8L17.6 20L12 17L6.4 20L7.5 13.8L3 9.5L9.1 8.6L12 3Z"/>
+                </svg>
+
+            </button>
+
+            <div class="content">
+
+                <div class="card-title">
+                    Smoothie Bar
+                </div>
+
+                <div class="card-desc">
+                    Освежающие смузи и вечерний отдых в стиле Bangkok Relax.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+document.querySelectorAll('.bookmark').forEach(button => {
+
+    button.addEventListener('click', () => {
+
+        button.classList.toggle('active');
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
