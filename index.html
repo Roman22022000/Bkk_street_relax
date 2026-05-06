@@ -105,6 +105,10 @@ body{
     height:52px;
 
     border:none;
+    outline:none;
+
+    -webkit-tap-highlight-color:transparent;
+
     border-radius:18px;
 
     background:rgba(15,15,15,0.72);
@@ -119,6 +123,14 @@ body{
     transition:0.25s;
 
     z-index:5;
+}
+
+.bookmark:focus{
+    outline:none;
+}
+
+.bookmark:active{
+    outline:none;
 }
 
 .bookmark svg{
